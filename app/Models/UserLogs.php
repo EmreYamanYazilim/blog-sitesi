@@ -9,4 +9,10 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 class UserLogs extends Model
 {
     use HasFactory, SoftDeletes;
+
+    protected $fillable = [
+        "user_id",
+        "process_id",
+        "process_type"
+    ];
 }

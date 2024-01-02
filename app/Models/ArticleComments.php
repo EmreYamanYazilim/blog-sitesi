@@ -8,5 +8,15 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class ArticleComments extends Model
 {
-    use HasFactory ,SoftDeletes;
+    use HasFactory, SoftDeletes;
+
+    protected $fillable = [
+        "user_id",
+        "article_id",
+        "parent_id",
+        "comment",
+        "status",
+        "like_count",
+        "unlike_count",
+    ];
 }
